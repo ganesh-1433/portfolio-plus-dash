@@ -1,27 +1,57 @@
 import { Card } from "@/components/ui/card";
-import { Database, Code, Wrench, BookOpen } from "lucide-react";
+import pythonIcon from "@/assets/skills/python.svg";
+import sqlIcon from "@/assets/skills/sql.svg";
+import numpyIcon from "@/assets/skills/numpy.svg";
+import pandasIcon from "@/assets/skills/pandas.svg";
+import matplotlibIcon from "@/assets/skills/matplotlib.svg";
+import seabornIcon from "@/assets/skills/seaborn.png";
+import powerbiIcon from "@/assets/skills/powerbi.png";
+import vscodeIcon from "@/assets/skills/vscode.svg";
+import tableauIcon from "@/assets/skills/tableau.png";
+import excelIcon from "@/assets/skills/excel.png";
+import mysqlIcon from "@/assets/skills/sql.svg";
+import mongodbIcon from "@/assets/skills/mongodb.svg";
+import oracleIcon from "@/assets/skills/oracle.svg";
+import sqliteIcon from "@/assets/skills/sqlite.svg";
+import postgresqlIcon from "@/assets/skills/postgresql.svg";
 
 const Skills = () => {
   const skillCategories = [
     {
       title: "Programming Languages",
-      icon: Code,
-      skills: ["Python", "SQL"],
+      skills: [
+        { name: "Python", icon: pythonIcon },
+        { name: "SQL", icon: sqlIcon },
+      ],
     },
     {
       title: "Libraries & Frameworks",
-      icon: BookOpen,
-      skills: ["NumPy", "Pandas", "Matplotlib", "Seaborn", "Scikit-Learn"],
+      skills: [
+        { name: "NumPy", icon: numpyIcon },
+        { name: "Pandas", icon: pandasIcon },
+        { name: "Matplotlib", icon: matplotlibIcon },
+        { name: "Seaborn", icon: seabornIcon },
+        { name: "Scikit-Learn", icon: pythonIcon },
+      ],
     },
     {
       title: "Tools & Platforms",
-      icon: Wrench,
-      skills: ["Power BI", "VS Code", "Tableau", "Excel"],
+      skills: [
+        { name: "Power BI", icon: powerbiIcon },
+        { name: "VS Code", icon: vscodeIcon },
+        { name: "Tableau", icon: tableauIcon },
+        { name: "Excel", icon: excelIcon },
+      ],
     },
     {
       title: "Databases",
-      icon: Database,
-      skills: ["MySQL", "MongoDB", "Oracle", "SQLite", "PostgreSQL"],
+      skills: [
+        { name: "MySQL", icon: mysqlIcon },
+        { name: "MongoDB", icon: mongodbIcon },
+        { name: "Oracle", icon: oracleIcon },
+        { name: "SQLite", icon: sqliteIcon },
+        { name: "PostgreSQL", icon: postgresqlIcon },
+      ],
     },
   ];
 
@@ -36,32 +66,33 @@ const Skills = () => {
             Technologies and tools I work with
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {skillCategories.map((category, index) => {
-              const IconComponent = category.icon;
-              return (
-                <Card key={index} className="p-6 bg-card border-border hover:border-primary/50 transition-all">
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="p-2 bg-primary/10 rounded-lg">
-                      <IconComponent className="w-6 h-6 text-primary" />
-                    </div>
-                    <h3 className="text-xl font-semibold text-foreground">
-                      {category.title}
-                    </h3>
-                  </div>
-                  <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
-                    {category.skills.map((skill, skillIndex) => (
-                      <div
-                        key={skillIndex}
-                        className="flex items-center justify-center p-3 rounded-lg bg-primary/5 border border-primary/20 hover:bg-primary/10 hover:border-primary/40 transition-all"
-                      >
-                        <span className="text-sm font-medium text-foreground">{skill}</span>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {skillCategories.map((category, index) => (
+              <Card key={index} className="p-8 bg-card border-border hover:border-primary/50 transition-all">
+                <h3 className="text-2xl font-semibold mb-6 text-foreground">
+                  {category.title}
+                </h3>
+                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
+                  {category.skills.map((skill, skillIndex) => (
+                    <div
+                      key={skillIndex}
+                      className="flex flex-col items-center gap-3 p-4 rounded-lg hover:bg-primary/5 transition-all group"
+                    >
+                      <div className="w-16 h-16 flex items-center justify-center">
+                        <img 
+                          src={skill.icon} 
+                          alt={skill.name}
+                          className="w-full h-full object-contain group-hover:scale-110 transition-transform"
+                        />
                       </div>
-                    ))}
-                  </div>
-                </Card>
-              );
-            })}
+                      <span className="text-sm font-medium text-center text-foreground">
+                        {skill.name}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </Card>
+            ))}
           </div>
         </div>
       </div>

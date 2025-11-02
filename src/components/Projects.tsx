@@ -78,7 +78,7 @@ const Projects = () => {
             Explore my portfolio of data science and security projects
           </p>
 
-          <div className="grid grid-cols-1 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {projects.map((project, index) => (
               <Card
                 key={index}
