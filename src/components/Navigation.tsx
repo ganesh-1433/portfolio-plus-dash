@@ -28,11 +28,17 @@ const Navigation = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <Link to="/" className="text-2xl font-bold text-gradient">
-            Ganesh
+            Ganesh Pawar
           </Link>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">
+            <Link
+              to="/"
+              className="text-foreground hover:text-primary transition-colors"
+            >
+              Home
+            </Link>
             <Link
               to="/about"
               className="text-foreground hover:text-primary transition-colors"
@@ -76,6 +82,13 @@ const Navigation = () => {
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
           <div className="md:hidden py-4 space-y-4">
+            <Link
+              to="/"
+              onClick={closeMobileMenu}
+              className="block w-full text-left text-foreground hover:text-primary transition-colors"
+            >
+              Home
+            </Link>
             <Link
               to="/about"
               onClick={closeMobileMenu}

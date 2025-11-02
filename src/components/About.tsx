@@ -3,7 +3,7 @@ import { GraduationCap } from "lucide-react";
 
 const About = () => {
   return (
-    <section id="about" className="py-20 bg-transparent">
+    <section id="about" className="py-20 pt-32 bg-transparent">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">

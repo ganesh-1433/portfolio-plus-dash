@@ -193,13 +193,13 @@ const ProjectDetail = () => {
       {/* Hero Section */}
       <section className="pt-24 pb-12 bg-background">
         <div className="container mx-auto px-4">
-          <Link to="/">
+          <Link to="/projects">
             <Button
               variant="outline"
               className="mb-6 border-primary text-primary hover:bg-primary hover:text-primary-foreground"
             >
               <ArrowLeft className="mr-2" size={18} />
-              Back to Portfolio
+              Back to Projects
             </Button>
           </Link>
 
