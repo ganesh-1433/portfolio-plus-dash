@@ -3,7 +3,7 @@ import { GraduationCap } from "lucide-react";
 
 const About = () => {
   return (
-    <section id="about" className="py-20 bg-background">
+    <section id="about" className="py-20 bg-transparent">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">
@@ -12,7 +12,7 @@ const About = () => {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-12">
             {/* Journey Section */}
-            <Card className="p-8 bg-card border-border">
+            <Card className="p-8 bg-card/50 backdrop-blur-sm border-border card-glow">
               <h3 className="text-2xl font-bold mb-4 text-primary">
                 My Journey into Data Science
               </h3>
@@ -36,7 +36,7 @@ const About = () => {
             </Card>
 
             {/* Education Section */}
-            <Card className="p-8 bg-card border-border">
+            <Card className="p-8 bg-card/50 backdrop-blur-sm border-border card-glow">
               <div className="flex items-center gap-3 mb-4">
                 <div className="p-2 bg-primary/10 rounded-lg">
                   <GraduationCap className="w-6 h-6 text-primary" />

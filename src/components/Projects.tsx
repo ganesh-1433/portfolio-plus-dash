@@ -68,7 +68,7 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-20 bg-background">
+    <section id="projects" className="py-20 bg-transparent">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">
@@ -82,7 +82,7 @@ const Projects = () => {
             {projects.map((project, index) => (
               <Card
                 key={index}
-                className="overflow-hidden bg-card border-border card-glow"
+                className="overflow-hidden bg-card/50 backdrop-blur-sm border-border card-glow"
               >
                 <div className="relative h-64 overflow-hidden">
                   <img
