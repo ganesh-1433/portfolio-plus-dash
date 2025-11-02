@@ -29,7 +29,7 @@ const handler = async (req: Request): Promise<Response> => {
     // Send email to you (Ganesh)
     const emailResponse = await resend.emails.send({
       from: "Portfolio Contact <onboarding@resend.dev>",
-      to: ["ganeshpawar03@gmail.com"],
+      to: ["gpawar0209@gmail.com"],
       reply_to: email,
       subject: `New Portfolio Contact from ${name}`,
       html: `
