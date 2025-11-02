@@ -1,6 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, ExternalLink, Github } from "lucide-react";
+import { ArrowRight, ExternalLink, Github, ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
 import project1Image from "@/assets/project1.jpg";
 import project2Image from "@/assets/project2.jpg";
@@ -147,6 +147,19 @@ const Projects = () => {
                 </div>
               </Card>
             ))}
+          </div>
+
+          {/* Navigation to Dashboards */}
+          <div className="flex justify-center mt-12">
+            <Link to="/dashboards">
+              <Button
+                size="lg"
+                className="bg-primary hover:bg-primary/90 text-primary-foreground group"
+              >
+                <ArrowLeft className="mr-2 group-hover:-translate-x-1 transition-transform" size={18} />
+                View Dashboards
+              </Button>
+            </Link>
           </div>
         </div>
       </div>

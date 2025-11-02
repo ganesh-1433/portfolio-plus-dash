@@ -1,6 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { BarChart3, ExternalLink, TrendingUp } from "lucide-react";
+import { BarChart3, ExternalLink, TrendingUp, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import dashboardImage from "@/assets/dashboard-preview.jpg";
 
 const Dashboards = () => {
@@ -109,6 +110,19 @@ const Dashboards = () => {
                 </div>
               </Card>
             ))}
+          </div>
+
+          {/* Navigation to Projects */}
+          <div className="flex justify-center mt-12">
+            <Link to="/projects">
+              <Button
+                size="lg"
+                className="bg-primary hover:bg-primary/90 text-primary-foreground group"
+              >
+                View Projects
+                <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={18} />
+              </Button>
+            </Link>
           </div>
         </div>
       </div>
