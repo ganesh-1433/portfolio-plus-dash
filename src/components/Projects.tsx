@@ -8,24 +8,62 @@ import project2Image from "@/assets/project2.jpg";
 const Projects = () => {
   const projects = [
     {
-      id: "e-commerce-platform",
-      title: "E-Commerce Platform",
+      id: "network-security-etl",
+      title: "Network Security Using ETL Pipelines",
       description:
-        "A full-featured e-commerce platform with product management, shopping cart, and payment integration. Built with React and modern web technologies.",
+        "A PHP-MySQL-based security system designed to detect and prevent unauthorized data leaks with Morse code passkey mechanism. Built with XAMPP, it integrates admin-controlled user management, transaction monitoring, and secure file transfers.",
       image: project1Image,
-      technologies: ["React", "TypeScript", "Tailwind CSS", "REST API"],
+      technologies: ["Python", "ETL Pipelining", "Dagshub", "MLops", "HTML5", "CSS", "JavaScript"],
       github: "https://github.com/ganesh-1433",
       live: "#",
+      contributors: [
+        { name: "Mayank Tiwari", url: "https://www.linkedin.com/in/mayank-tiwari04/" },
+        { name: "Rutvij Jadhav", url: "https://www.linkedin.com/in/jadhavrutvij/" },
+        { name: "Rahul Kushwaha", url: "https://www.linkedin.com/in/rahulkushwaha15/" },
+      ],
     },
     {
-      id: "mobile-app-design",
-      title: "Mobile App Design",
+      id: "data-leakage-detection",
+      title: "Data Leakage Detection System",
       description:
-        "A sleek mobile application interface focusing on user experience and modern design principles. Features smooth animations and intuitive navigation.",
+        "Detects and prevents unauthorized data leaks using Morse code encryption and secure authentication mechanisms. A PHP-MySQL-based security system with Morse code-based passkey mechanism. If guessed incorrectly twice, access is blocked.",
       image: project2Image,
-      technologies: ["React Native", "UI/UX", "JavaScript", "Firebase"],
+      technologies: ["PHP", "PhpMyAdmin", "MySQL", "HTML5", "CSS", "JavaScript", "Bootstrap"],
       github: "https://github.com/ganesh-1433",
       live: "#",
+      contributors: [
+        { name: "Mayank Tiwari", url: "https://www.linkedin.com/in/mayank-tiwari04/" },
+        { name: "Rutvij Jadhav", url: "https://www.linkedin.com/in/jadhavrutvij/" },
+        { name: "Rahul Kushwaha", url: "https://www.linkedin.com/in/rahulkushwaha15/" },
+      ],
+    },
+    {
+      id: "online-voting-system",
+      title: "Online Voting System",
+      description:
+        "A secure and transparent Python-based platform designed to facilitate digital elections with integrity and end-to-end encryption. Built using Flask, SQLite and Cryptography, it ensures voter authentication and tamper-proof voting records with SHA-256 hashing and OTP-based authentication.",
+      image: project1Image,
+      technologies: ["Python", "Flask", "SQLite", "HTML5", "CSS", "Cryptography"],
+      github: "https://github.com/ganesh-1433",
+      live: "#",
+      contributors: [
+        { name: "Mayank Tiwari", url: "https://www.linkedin.com/in/mayank-tiwari04/" },
+        { name: "Rahul Kushwaha", url: "https://www.linkedin.com/in/rahulkushwaha15/" },
+      ],
+    },
+    {
+      id: "morse-code-trainer",
+      title: "Morse Code Trainer",
+      description:
+        "Interactive Python-based learning tool designed to teach Morse code efficiently with real-time encoding and decoding. Built using Flask and Tkinter with adaptive training modules. Supports text-to-Morse and Morse-to-text conversion with customizable difficulty levels.",
+      image: project2Image,
+      technologies: ["Python", "Flask", "Tkinter", "NumPy", "Matplotlib"],
+      github: "https://github.com/ganesh-1433",
+      live: "#",
+      contributors: [
+        { name: "Mayank Tiwari", url: "https://www.linkedin.com/in/mayank-tiwari04/" },
+        { name: "Rahul Kushwaha", url: "https://www.linkedin.com/in/rahulkushwaha15/" },
+      ],
     },
   ];
 
@@ -37,10 +75,10 @@ const Projects = () => {
             Featured <span className="text-gradient">Projects</span>
           </h2>
           <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-            Showcasing my latest work in web development and design
+            Explore my portfolio of data science and security projects
           </p>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 gap-8">
             {projects.map((project, index) => (
               <Card
                 key={index}
