@@ -12,7 +12,7 @@ const About = () => {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-12">
             {/* Journey Section */}
-            <Card className="p-8 bg-card/50 backdrop-blur-sm border-border card-glow">
+            <div className="p-8">
               <h3 className="text-2xl font-bold mb-4 text-primary">
                 My Journey into Data Science
               </h3>
@@ -33,7 +33,7 @@ const About = () => {
                   actively contribute towards technical growth and community engagement.
                 </p>
               </div>
-            </Card>
+            </div>
 
             {/* Education Section */}
             <Card className="p-8 bg-card/50 backdrop-blur-sm border-border card-glow">

@@ -1,14 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Github, Linkedin, Mail, ChevronDown } from "lucide-react";
-import heroImage from "@/assets/hero-bg.jpg";
+import heroImage from "@/assets/ganesh.jpg";
+
+import { useNavigate } from "react-router-dom";
 
 const Hero = () => {
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
+  const navigate = useNavigate();
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -43,7 +40,7 @@ const Hero = () => {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button
-              onClick={() => scrollToSection("projects")}
+              onClick={() => navigate("/dashboards")}
               className="bg-primary hover:bg-primary/90 text-primary-foreground group"
               size="lg"
             >
@@ -51,7 +48,7 @@ const Hero = () => {
               <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
             </Button>
             <Button
-              onClick={() => scrollToSection("contact")}
+              onClick={() => navigate("/contact")}
               variant="outline"
               size="lg"
               className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"

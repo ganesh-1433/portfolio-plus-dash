@@ -36,14 +36,14 @@ const Dashboards = () => {
             Interactive dashboards transforming complex data into actionable insights
           </p>
 
-          <div className="space-y-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {dashboards.map((dashboard, index) => (
               <Card
                 key={index}
                 className="overflow-hidden bg-card/50 backdrop-blur-sm border-border card-glow"
               >
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                  <div className="relative h-64 lg:h-auto overflow-hidden">
+                <div className="flex flex-col">
+                  <div className="relative h-48 overflow-hidden">
                     <img
                       src={dashboard.image}
                       alt={dashboard.title}
@@ -51,7 +51,7 @@ const Dashboards = () => {
                     />
                   </div>
 
-                  <div className="p-6 flex flex-col justify-center">
+                  <div className="p-6 flex flex-col justify-center flex-grow">
                     <div className="flex items-center gap-2 mb-3">
                       <BarChart3 className="text-primary" size={24} />
                       <h3 className="text-2xl font-bold">{dashboard.title}</h3>

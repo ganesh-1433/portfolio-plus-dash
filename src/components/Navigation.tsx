@@ -15,12 +15,8 @@ const Navigation = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-      setIsMobileMenuOpen(false);
-    }
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false);
   };
 
   return (
@@ -37,36 +33,35 @@ const Navigation = () => {
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">
-            <button
-              onClick={() => scrollToSection("about")}
+            <Link
+              to="/about"
               className="text-foreground hover:text-primary transition-colors"
             >
               About
-            </button>
-            <button
-              onClick={() => scrollToSection("skills")}
+            </Link>
+            <Link
+              to="/skills"
               className="text-foreground hover:text-primary transition-colors"
             >
               Skills
-            </button>
-            <button
-              onClick={() => scrollToSection("dashboards")}
+            </Link>
+            <Link
+              to="/dashboards"
               className="text-foreground hover:text-primary transition-colors"
             >
               Dashboards
-            </button>
-            <button
-              onClick={() => scrollToSection("projects")}
+            </Link>
+            <Link
+              to="/projects"
               className="text-foreground hover:text-primary transition-colors"
             >
               Projects
-            </button>
-            <Button
-              onClick={() => scrollToSection("contact")}
-              className="bg-primary hover:bg-primary/90 text-primary-foreground"
-            >
-              Get in Touch
-            </Button>
+            </Link>
+            <Link to="/contact">
+              <Button className="bg-primary hover:bg-primary/90 text-primary-foreground">
+                Get in Touch
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -81,36 +76,39 @@ const Navigation = () => {
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
           <div className="md:hidden py-4 space-y-4">
-            <button
-              onClick={() => scrollToSection("about")}
+            <Link
+              to="/about"
+              onClick={closeMobileMenu}
               className="block w-full text-left text-foreground hover:text-primary transition-colors"
             >
               About
-            </button>
-            <button
-              onClick={() => scrollToSection("skills")}
+            </Link>
+            <Link
+              to="/skills"
+              onClick={closeMobileMenu}
               className="block w-full text-left text-foreground hover:text-primary transition-colors"
             >
               Skills
-            </button>
-            <button
-              onClick={() => scrollToSection("dashboards")}
+            </Link>
+            <Link
+              to="/dashboards"
+              onClick={closeMobileMenu}
               className="block w-full text-left text-foreground hover:text-primary transition-colors"
             >
               Dashboards
-            </button>
-            <button
-              onClick={() => scrollToSection("projects")}
+            </Link>
+            <Link
+              to="/projects"
+              onClick={closeMobileMenu}
               className="block w-full text-left text-foreground hover:text-primary transition-colors"
             >
               Projects
-            </button>
-            <Button
-              onClick={() => scrollToSection("contact")}
-              className="w-full bg-primary hover:bg-primary/90 text-primary-foreground"
-            >
-              Get in Touch
-            </Button>
+            </Link>
+            <Link to="/contact" onClick={closeMobileMenu}>
+              <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground">
+                Get in Touch
+              </Button>
+            </Link>
           </div>
         )}
       </div>
