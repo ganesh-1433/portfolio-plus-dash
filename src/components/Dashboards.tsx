@@ -13,7 +13,7 @@ const Dashboards = () => {
       image: dashboardImage,
       metrics: ["Revenue Tracking", "Customer Insights", "Sales Trends"],
       tools: ["Power BI", "SQL", "Python"],
-      link: "#",
+      link: "https://app.powerbi.com/links/QuVSZEAkvL?ctid=9ff218eb-de4f-4e3e-95c4-d3cae83d933a&pbi_source=linkShare&bookmarkGuid=0029af8b-ed3c-42a6-b51c-a04f69b60351",
     },
     {
       title: "Marketing Performance Dashboard",
