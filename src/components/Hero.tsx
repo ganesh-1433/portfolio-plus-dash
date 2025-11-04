@@ -57,30 +57,6 @@ const Hero = () => {
             </Button>
           </div>
 
-          <div className="flex gap-6 justify-center pt-8">
-            <a
-              href="https://github.com/ganesh-1433"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-primary transition-colors"
-            >
-              <Github size={24} />
-            </a>
-            <a
-              href="https://linkedin.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-primary transition-colors"
-            >
-              <Linkedin size={24} />
-            </a>
-            <a
-              href="mailto:ganesh@example.com"
-              className="text-muted-foreground hover:text-primary transition-colors"
-            >
-              <Mail size={24} />
-            </a>
-          </div>
         </div>
       </div>
 
