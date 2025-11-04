@@ -1,4 +1,5 @@
 import { useParams, Link } from "react-router-dom";
+import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ArrowLeft, Github, ExternalLink, CheckCircle, Users } from "lucide-react";
@@ -9,6 +10,10 @@ import project2Image from "@/assets/project2.jpg";
 
 const ProjectDetail = () => {
   const { id } = useParams();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [id]);
 
   // Project data (in a real app, this would come from a database or API)
   const projectData: Record<string, any> = {
