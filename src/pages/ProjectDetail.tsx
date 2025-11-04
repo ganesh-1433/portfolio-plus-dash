@@ -210,64 +210,6 @@ const ProjectDetail = () => {
             <p className="text-xl text-muted-foreground mb-6">
               {project.description}
             </p>
-
-            <div className="flex flex-wrap gap-3 mb-8">
-              {project.technologies.map((tech: string, index: number) => (
-                <span
-                  key={index}
-                  className="px-4 py-2 rounded-full bg-primary/10 text-primary border border-primary/20"
-                >
-                  {tech}
-                </span>
-              ))}
-            </div>
-
-            <div className="flex flex-wrap gap-4">
-              <Button
-                asChild
-                className="bg-primary hover:bg-primary/90 text-primary-foreground"
-              >
-                <a href={project.github} target="_blank" rel="noopener noreferrer">
-                  <Github className="mr-2" size={18} />
-                  View Code
-                </a>
-              </Button>
-              {project.live && project.live !== "#" && (
-                <Button
-                  asChild
-                  variant="outline"
-                  className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
-                >
-                  <a href={project.live} target="_blank" rel="noopener noreferrer">
-                    <ExternalLink className="mr-2" size={18} />
-                    Live Demo
-                  </a>
-                </Button>
-              )}
-            </div>
-
-            {/* Contributors */}
-            {project.contributors && project.contributors.length > 0 && (
-              <Card className="p-6 bg-card/50 border-border mt-8">
-                <div className="flex items-center gap-2 mb-4">
-                  <Users className="text-primary" size={24} />
-                  <h3 className="text-xl font-semibold">Contributors</h3>
-                </div>
-                <div className="flex flex-wrap gap-3">
-                  {project.contributors.map((contributor: any, index: number) => (
-                    <a
-                      key={index}
-                      href={contributor.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="px-4 py-2 rounded-lg bg-primary/10 border border-primary/20 hover:bg-primary/20 transition-colors text-sm font-medium"
-                    >
-                      {contributor.name}
-                    </a>
-                  ))}
-                </div>
-              </Card>
-            )}
           </div>
         </div>
       </section>
@@ -345,6 +287,75 @@ const ProjectDetail = () => {
                 ))}
               </ul>
             </Card>
+
+            {/* Tech Stack */}
+            <Card className="p-8 bg-card border-border">
+              <h2 className="text-3xl font-bold mb-6">
+                Tech <span className="text-gradient">Stack</span>
+              </h2>
+              <div className="flex flex-wrap gap-3">
+                {project.technologies.map((tech: string, index: number) => (
+                  <span
+                    key={index}
+                    className="px-4 py-2 rounded-full bg-primary/10 text-primary border border-primary/20"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            </Card>
+
+            {/* Project Links */}
+            <Card className="p-8 bg-card border-border">
+              <h2 className="text-3xl font-bold mb-6">
+                Project <span className="text-gradient">Links</span>
+              </h2>
+              <div className="flex flex-wrap gap-4">
+                <Button
+                  asChild
+                  className="bg-primary hover:bg-primary/90 text-primary-foreground"
+                >
+                  <a href={project.github} target="_blank" rel="noopener noreferrer">
+                    <Github className="mr-2" size={18} />
+                    View Code
+                  </a>
+                </Button>
+                {project.live && project.live !== "#" && (
+                  <Button
+                    asChild
+                    variant="outline"
+                    className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+                  >
+                    <a href={project.live} target="_blank" rel="noopener noreferrer">
+                      <ExternalLink className="mr-2" size={18} />
+                      Live Demo
+                    </a>
+                  </Button>
+                )}
+              </div>
+            </Card>
+
+            {/* Contributors */}
+            {project.contributors && project.contributors.length > 0 && (
+              <Card className="p-8 bg-card border-border">
+                <h2 className="text-3xl font-bold mb-6">
+                  <span className="text-gradient">Contributors</span>
+                </h2>
+                <div className="flex flex-wrap gap-3">
+                  {project.contributors.map((contributor: any, index: number) => (
+                    <a
+                      key={index}
+                      href={contributor.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-4 py-2 rounded-lg bg-primary/10 border border-primary/20 hover:bg-primary/20 transition-colors text-sm font-medium"
+                    >
+                      {contributor.name}
+                    </a>
+                  ))}
+                </div>
+              </Card>
+            )}
           </div>
         </div>
       </section>
