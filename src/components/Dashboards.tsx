@@ -2,7 +2,8 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { BarChart3, ExternalLink, TrendingUp, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
-import dashboardImage from "@/assets/dashboard-preview.jpg";
+import bikeSalesImage from "@/assets/Bike_Sales_Analysis.png";
+import blinkitDashboardImage from "@/assets/Blinkit_Dashboard.png";
 
 const Dashboards = () => {
   const dashboards = [
@@ -10,7 +11,7 @@ const Dashboards = () => {
       title: "Sales Analytics Dashboard",
       description:
         "Comprehensive sales performance tracking with real-time metrics, trend analysis, and forecasting capabilities.",
-      image: dashboardImage,
+      image: bikeSalesImage,
       metrics: ["Revenue Tracking", "Customer Insights", "Sales Trends"],
       tools: ["Power BI", "SQL", "Python"],
       link: "https://app.powerbi.com/links/QuVSZEAkvL?ctid=9ff218eb-de4f-4e3e-95c4-d3cae83d933a&pbi_source=linkShare&bookmarkGuid=0029af8b-ed3c-42a6-b51c-a04f69b60351",
@@ -19,7 +20,7 @@ const Dashboards = () => {
       title: "Marketing Performance Dashboard",
       description:
         "Track marketing campaign effectiveness, ROI analysis, and audience engagement metrics in one place.",
-      image: dashboardImage,
+      image: blinkitDashboardImage,
       metrics: ["Campaign ROI", "Engagement Rates", "Conversion Tracking"],
       tools: ["Tableau", "Google Analytics", "Excel"],
       link: "#",
