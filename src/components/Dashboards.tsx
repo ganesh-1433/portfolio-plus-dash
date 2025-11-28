@@ -8,17 +8,45 @@ import blinkitDashboardImage from "@/assets/Blinkit_Dashboard.png";
 const Dashboards = () => {
   const dashboards = [
     {
-      id: "sales-analytics",
-      title: "Sales Analytics Dashboard",
+      id: "bike-sales-analysis",
+      title: "Bike Sales Analysis",
       description:
-        "Comprehensive sales performance tracking with real-time metrics, trend analysis, and forecasting capabilities.",
+        "Comprehensive bike sales performance tracking with real-time metrics, trend analysis, and forecasting capabilities.",
       image: bikeSalesImage,
     },
     {
-      id: "marketing-performance",
-      title: "Marketing Performance Dashboard",
+      id: "blinkit-sales-dashboard",
+      title: "Blinkit Sales Dashboard",
       description:
-        "Track marketing campaign effectiveness, ROI analysis, and audience engagement metrics in one place.",
+        "Track Blinkit sales performance, order metrics, and customer insights across multiple regions.",
+      image: blinkitDashboardImage,
+    },
+    {
+      id: "customer-analytics",
+      title: "Customer Analytics Dashboard",
+      description:
+        "Deep dive into customer behavior, segmentation, and lifetime value analysis.",
+      image: bikeSalesImage,
+    },
+    {
+      id: "financial-insights",
+      title: "Financial Insights Dashboard",
+      description:
+        "Monitor revenue streams, expenses, and profitability metrics with predictive analytics.",
+      image: blinkitDashboardImage,
+    },
+    {
+      id: "inventory-management",
+      title: "Inventory Management Dashboard",
+      description:
+        "Real-time inventory tracking, stock optimization, and supply chain analytics.",
+      image: bikeSalesImage,
+    },
+    {
+      id: "operational-efficiency",
+      title: "Operational Efficiency Dashboard",
+      description:
+        "Track operational KPIs, process efficiency, and resource utilization metrics.",
       image: blinkitDashboardImage,
     },
   ];

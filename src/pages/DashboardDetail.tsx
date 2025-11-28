@@ -17,17 +17,17 @@ const DashboardDetail = () => {
 
   // Dashboard data
   const dashboardData: Record<string, any> = {
-    "sales-analytics": {
-      title: "Sales Analytics Dashboard",
+    "bike-sales-analysis": {
+      title: "Bike Sales Analysis",
       description:
-        "Comprehensive sales performance tracking with real-time metrics, trend analysis, and forecasting capabilities.",
+        "Comprehensive bike sales performance tracking with real-time metrics, trend analysis, and forecasting capabilities.",
       image: bikeSalesImage,
-      tools: ["Power BI", "SQL", "Python"],
+      tools: ["Tableau", "SQL", "Python"],
       link: "https://app.powerbi.com/links/QuVSZEAkvL?ctid=9ff218eb-de4f-4e3e-95c4-d3cae83d933a&pbi_source=linkShare&bookmarkGuid=0029af8b-ed3c-42a6-b51c-a04f69b60351",
       longDescription: `
-        This comprehensive sales analytics dashboard provides real-time insights into business performance, 
-        enabling data-driven decision making. Built with Power BI, it integrates multiple data sources to 
-        deliver actionable insights on revenue, customer behavior, and sales trends.
+        This comprehensive bike sales analytics dashboard provides real-time insights into business performance, 
+        enabling data-driven decision making. Built with Tableau, it integrates multiple data sources to 
+        deliver actionable insights on revenue, customer behavior, and sales trends in the cycling industry.
       `,
       features: [
         "Real-time revenue tracking and forecasting",
@@ -49,42 +49,182 @@ const DashboardDetail = () => {
         { name: "Revenue Tracking", description: "Monitor daily, weekly, and monthly revenue trends" },
         { name: "Customer Insights", description: "Understand customer demographics and purchase patterns" },
         { name: "Sales Trends", description: "Identify seasonal patterns and growth opportunities" },
-        { name: "Product Performance", description: "Track best-selling products and categories" },
+        { name: "Product Performance", description: "Track best-selling bike models and categories" },
       ],
     },
-    "marketing-performance": {
-      title: "Marketing Performance Dashboard",
+    "blinkit-sales-dashboard": {
+      title: "Blinkit Sales Dashboard",
       description:
-        "Track marketing campaign effectiveness, ROI analysis, and audience engagement metrics in one place.",
+        "Track Blinkit sales performance, order metrics, and customer insights across multiple regions.",
       image: blinkitDashboardImage,
-      tools: ["Tableau", "Google Analytics", "Excel"],
+      tools: ["Power BI", "SQL", "Excel"],
       link: "#",
       longDescription: `
-        A comprehensive marketing performance dashboard that provides deep insights into campaign effectiveness,
-        audience engagement, and ROI. Built with Tableau and integrated with Google Analytics, this dashboard
-        enables marketing teams to optimize their strategies and maximize campaign impact.
+        A comprehensive Blinkit sales dashboard that provides deep insights into order performance,
+        customer engagement, and regional sales metrics. Built with Power BI, this dashboard
+        enables teams to optimize operations and maximize sales impact across different markets.
       `,
       features: [
-        "Multi-channel campaign tracking and analysis",
-        "ROI calculation and optimization insights",
-        "Audience engagement metrics and trends",
-        "Conversion funnel visualization",
-        "A/B testing results and recommendations",
-        "Social media performance tracking",
-        "Email campaign analytics",
-        "Budget allocation recommendations",
+        "Multi-region sales tracking and analysis",
+        "Order volume and value metrics",
+        "Customer engagement and retention analysis",
+        "Delivery performance tracking",
+        "Category-wise sales breakdown",
+        "Peak hours and demand patterns",
+        "Inventory turnover analysis",
+        "Customer feedback and ratings integration",
       ],
       insights: [
-        "Improved campaign ROI by 40% through data-driven optimization",
-        "Increased engagement rates by 35% across channels",
-        "Reduced customer acquisition cost by 28%",
-        "Enhanced targeting precision with audience segmentation",
+        "Improved order fulfillment time by 35%",
+        "Increased customer retention by 42% through targeted campaigns",
+        "Reduced delivery costs by 22% with route optimization",
+        "Enhanced inventory management with predictive analytics",
       ],
       metrics: [
-        { name: "Campaign ROI", description: "Measure return on investment for marketing campaigns" },
-        { name: "Engagement Rates", description: "Track user interactions and engagement across platforms" },
-        { name: "Conversion Tracking", description: "Monitor conversion rates and optimize funnels" },
-        { name: "Audience Growth", description: "Analyze audience growth and retention metrics" },
+        { name: "Order Metrics", description: "Track order volume, value, and completion rates" },
+        { name: "Regional Performance", description: "Analyze sales performance across different regions" },
+        { name: "Customer Behavior", description: "Monitor customer purchase patterns and preferences" },
+        { name: "Delivery Efficiency", description: "Track delivery times and operational efficiency" },
+      ],
+    },
+    "customer-analytics": {
+      title: "Customer Analytics Dashboard",
+      description:
+        "Deep dive into customer behavior, segmentation, and lifetime value analysis.",
+      image: bikeSalesImage,
+      tools: ["Power BI", "Python", "SQL"],
+      link: "#",
+      longDescription: `
+        A detailed customer analytics dashboard that reveals deep insights into customer behavior, 
+        preferences, and value. This dashboard helps businesses understand their customers better 
+        and make data-driven decisions for improved customer experiences.
+      `,
+      features: [
+        "Customer lifetime value (CLV) calculation",
+        "Behavioral segmentation analysis",
+        "Purchase frequency and recency tracking",
+        "Customer churn prediction",
+        "Demographic analysis and profiling",
+        "Customer journey mapping",
+        "Retention rate monitoring",
+        "Personalization recommendations",
+      ],
+      insights: [
+        "Identified high-value customer segments contributing 60% of revenue",
+        "Reduced churn rate by 18% with predictive interventions",
+        "Improved customer satisfaction scores by 25%",
+        "Optimized marketing spend based on customer value",
+      ],
+      metrics: [
+        { name: "Customer LTV", description: "Calculate and track customer lifetime value" },
+        { name: "Churn Analysis", description: "Predict and prevent customer churn" },
+        { name: "Segmentation", description: "Understand different customer segments" },
+        { name: "Engagement Score", description: "Measure customer engagement levels" },
+      ],
+    },
+    "financial-insights": {
+      title: "Financial Insights Dashboard",
+      description:
+        "Monitor revenue streams, expenses, and profitability metrics with predictive analytics.",
+      image: blinkitDashboardImage,
+      tools: ["Tableau", "Excel", "SQL"],
+      link: "#",
+      longDescription: `
+        A comprehensive financial dashboard that provides real-time visibility into financial health,
+        revenue trends, and profitability metrics. Built to support strategic financial planning
+        and data-driven decision making for business growth.
+      `,
+      features: [
+        "Revenue and expense tracking",
+        "Profit margin analysis",
+        "Cash flow forecasting",
+        "Budget vs actual comparisons",
+        "Cost center analysis",
+        "Financial ratio calculations",
+        "Trend analysis and predictions",
+        "Custom financial reports",
+      ],
+      insights: [
+        "Identified cost-saving opportunities worth $2M annually",
+        "Improved profit margins by 15% through expense optimization",
+        "Enhanced budget accuracy with predictive models",
+        "Reduced financial reporting time by 60%",
+      ],
+      metrics: [
+        { name: "Revenue Streams", description: "Track revenue from different sources" },
+        { name: "Expense Analysis", description: "Monitor and optimize business expenses" },
+        { name: "Profitability", description: "Measure profit margins and ROI" },
+        { name: "Cash Flow", description: "Forecast and manage cash flow" },
+      ],
+    },
+    "inventory-management": {
+      title: "Inventory Management Dashboard",
+      description:
+        "Real-time inventory tracking, stock optimization, and supply chain analytics.",
+      image: bikeSalesImage,
+      tools: ["Power BI", "SQL", "Python"],
+      link: "#",
+      longDescription: `
+        A powerful inventory management dashboard that provides real-time visibility into stock levels,
+        turnover rates, and supply chain efficiency. Helps optimize inventory costs while ensuring
+        product availability and minimizing stockouts.
+      `,
+      features: [
+        "Real-time stock level monitoring",
+        "Inventory turnover analysis",
+        "Stockout and overstock alerts",
+        "Demand forecasting",
+        "Supplier performance tracking",
+        "Warehouse efficiency metrics",
+        "ABC analysis for inventory prioritization",
+        "Reorder point calculations",
+      ],
+      insights: [
+        "Reduced inventory holding costs by 30%",
+        "Decreased stockouts by 45% with predictive models",
+        "Improved inventory turnover ratio by 28%",
+        "Optimized reorder points saving $500K annually",
+      ],
+      metrics: [
+        { name: "Stock Levels", description: "Monitor current inventory levels in real-time" },
+        { name: "Turnover Rate", description: "Track how quickly inventory moves" },
+        { name: "Stockout Risk", description: "Predict and prevent stockout situations" },
+        { name: "Carrying Costs", description: "Calculate and optimize inventory costs" },
+      ],
+    },
+    "operational-efficiency": {
+      title: "Operational Efficiency Dashboard",
+      description:
+        "Track operational KPIs, process efficiency, and resource utilization metrics.",
+      image: blinkitDashboardImage,
+      tools: ["Tableau", "SQL", "Excel"],
+      link: "#",
+      longDescription: `
+        An operational efficiency dashboard that provides comprehensive insights into business operations,
+        process performance, and resource utilization. Enables continuous improvement and operational
+        excellence through data-driven monitoring and analysis.
+      `,
+      features: [
+        "Process efficiency metrics",
+        "Resource utilization tracking",
+        "Productivity analysis",
+        "Bottleneck identification",
+        "Cycle time monitoring",
+        "Quality metrics tracking",
+        "Operational cost analysis",
+        "Performance benchmarking",
+      ],
+      insights: [
+        "Improved overall operational efficiency by 32%",
+        "Reduced process cycle time by 40%",
+        "Increased resource utilization by 25%",
+        "Identified and eliminated 3 major bottlenecks",
+      ],
+      metrics: [
+        { name: "Efficiency Ratio", description: "Measure overall operational efficiency" },
+        { name: "Resource Usage", description: "Track utilization of resources" },
+        { name: "Process Time", description: "Monitor process cycle times" },
+        { name: "Quality Metrics", description: "Track quality and error rates" },
       ],
     },
   };
